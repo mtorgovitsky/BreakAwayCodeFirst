@@ -19,6 +19,7 @@ namespace BreakAwayCodeFirst.Modules
         public int? PrimaryActivity { get; set; }
         public int? SecondaryActivity { get; set; }
         public string Notes { get; set; }
+        public virtual Contact Contact { get; set; }
         //[Timestamp]
         //[Column("RowVersion")]
         //public byte[] RowVersionThis { get; set; }
@@ -36,5 +37,14 @@ namespace BreakAwayCodeFirst.Modules
         public DateTime ModifiedDate { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }
+    }
+
+    public class Activities
+    {
+        public int ActivityID { get; set; }
+        public string Activity { get; set; }
+        public string imagepath { get; set; }
+        [Required]
+        public string Category { get; set; }
     }
 }
