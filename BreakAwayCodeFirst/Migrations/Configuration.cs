@@ -9,7 +9,7 @@ namespace BreakAwayCodeFirst.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "BreakAwayCodeFirst.Modules.MyEnitiesDB";
         }
 

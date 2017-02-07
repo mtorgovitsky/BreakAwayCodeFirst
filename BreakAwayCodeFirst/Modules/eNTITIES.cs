@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BreakAwayCodeFirst.Modules
 {
     [Table("Customers")]
-    public class Customers : Contact
+    public class Customer : Contact
     {
         [Required]
         public int CustomerTypeID { get; set; }
@@ -19,10 +19,9 @@ namespace BreakAwayCodeFirst.Modules
         public int? PrimaryActivity { get; set; }
         public int? SecondaryActivity { get; set; }
         public string Notes { get; set; }
-        public virtual Contact Contact { get; set; }
-        //[Timestamp]
-        //[Column("RowVersion")]
-        //public byte[] RowVersionThis { get; set; }
+        [Column("RowVersion")]
+        [Timestamp]
+        public byte[] SomeProp { get; set; }
     }
 
     public class Contact

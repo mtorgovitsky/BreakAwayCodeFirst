@@ -13,7 +13,7 @@ namespace BreakAwayCodeFirst
         {
             using (var ctx = new MyEnitiesDB())
             {
-                Contact c1 = ctx.Customers.FirstOrDefault();
+                Customer c1 = ctx.Customers.FirstOrDefault();
             }
         }
     }

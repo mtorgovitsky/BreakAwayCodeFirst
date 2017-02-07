@@ -17,10 +17,15 @@ namespace BreakAwayCodeFirst.Modules
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<MyEnitiesDB>(new CreateDatabaseIfNotExists<MyEnitiesDB>());
+            base.OnModelCreating(modelBuilder);
+        }
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-        public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
