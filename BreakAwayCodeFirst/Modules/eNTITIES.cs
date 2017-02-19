@@ -19,9 +19,9 @@ namespace BreakAwayCodeFirst.Modules
         public int? PrimaryActivity { get; set; }
         public int? SecondaryActivity { get; set; }
         public string Notes { get; set; }
-        [Column("RowVersion")]
-        [Timestamp]
-        public byte[] SomeProp { get; set; }
+        //[Column("RowVersion")]
+        //[Timestamp]
+        //public byte[] SomeProp { get; set; }
     }
 
     public class Contact
